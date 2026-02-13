@@ -63,7 +63,12 @@ export default function NoteForm({ onClose }: NoteFormProps) {
       <Form className={css.form}>
         <div className={css.formGroup}>
           <label htmlFor={`${fieldId}-title`}>Title</label>
-          <Field id="title" type="text" name="title" className={css.input} />
+          <Field
+            id={`${fieldId}-title`}
+            type="text"
+            name="title"
+            className={css.input}
+          />
           <ErrorMessage name="title" component="span" className={css.error} />
         </div>
 
@@ -71,7 +76,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
           <label htmlFor={`${fieldId}-content`}>Content</label>
           <Field
             as="textarea"
-            id="content"
+            id={`${fieldId}-content`}
             name="content"
             rows={8}
             className={css.textarea}
@@ -81,7 +86,12 @@ export default function NoteForm({ onClose }: NoteFormProps) {
 
         <div className={css.formGroup}>
           <label htmlFor={`${fieldId}-tag`}>Tag</label>
-          <Field as="select" id="tag" name="tag" className={css.select}>
+          <Field
+            as="select"
+            id={`${fieldId}-tag`}
+            name="tag"
+            className={css.select}
+          >
             <option value="Todo">Todo</option>
             <option value="Work">Work</option>
             <option value="Personal">Personal</option>
